@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Keeping Units</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #6a6f73, #8e9eab);
+            color: #ffffff;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .left, .right {
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .left {
+            width: 50%;
+        }
+        .right {
+            width: 40%;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+        .right h2 {
+            margin-top: 0;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 1px solid white;
+            background: transparent;
+            color: white;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #00aaff;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0099dd;
+        }
+        h1 {
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel -->
+        <div class="left">
+            <h1>STOCK KEEPING UNITS</h1>
+            <p>
+                SKU (pronounced “skew”), short for stock keeping unit, is used by retailers to identify and track its inventory or stock.
+                A SKU is a unique code consisting of letters and numbers that identify characteristics about each product,
+                such as manufacturer, brand, style, color, and size.
+            </p>
+        </div>
+
+        <!-- Right Panel (Form) -->
+        <div class="right">
+            <form action="/predict" method="POST">
+                <h2>SKU</h2>
+                <input type="text" name="feature1" placeholder="Enter any Value" required>
+                <input type="text" name="feature2" placeholder="Enter any Value" required>
+                <input type="text" name="feature3" placeholder="Enter any Value" required>
+                <input type="text" name="feature4" placeholder="Enter any Value" required>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
