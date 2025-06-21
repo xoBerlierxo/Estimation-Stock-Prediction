@@ -1,9 +1,9 @@
 # **Estimating Stock Keeping Units (SKUs) Using Machine Learning**
 
-**Overview**
+**Overview**  
 This project focuses on forecasting SKU-level demand using machine learning. By analyzing historical sales data from Kaggle, the system predicts upcoming demand for individual products to help businesses avoid stockouts, reduce overstock, and streamline inventory operations.
 
-**Dataset**
+**Dataset**  
 The dataset used in this project was sourced from Kaggle:
 https://www.kaggle.com/datasets/aswathrao/demand-forecasting
 
@@ -14,18 +14,18 @@ https://www.kaggle.com/datasets/aswathrao/demand-forecasting
 - Hyperparameter tuning performed using RandomizedSearchCV.
 - Final Random Forest model saved using pickle.
 
-**Installation**
+**Installation**  
 Clone the repository:
 ```
 git clone https://github.com/xoBerlierxo/Estimation-Stock-Prediction.git
 ```
 
-**Install required packages:**
+**Install required packages:**  
 ```
 pip install -r requirements.txt
 ```
 
-**How to Run**
+**How to Run**  
 Run the training and evaluation script from the root directory:
 ```
 python model_training.py
