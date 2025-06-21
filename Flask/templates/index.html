@@ -2,84 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Stock Keeping Units</title>
+    <title>SKU Sales Prediction</title>
     <style>
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to right, #6a6f73, #8e9eab);
+            background: linear-gradient(to right, #434343, #000000);
             color: #ffffff;
         }
         .container {
             display: flex;
-            height: 100vh;
+            flex-wrap: wrap;
+            min-height: 100vh;
             align-items: center;
             justify-content: center;
+            padding: 20px;
         }
         .left, .right {
+            flex: 1 1 400px;
             padding: 40px;
             box-sizing: border-box;
         }
         .left {
-            width: 50%;
+            max-width: 600px;
+        }
+        .left h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .left p {
+            font-size: 18px;
+            line-height: 1.6;
         }
         .right {
-            width: 40%;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(255, 255, 255, 0.08);
             border-radius: 10px;
+            max-width: 400px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
         }
         .right h2 {
             margin-top: 0;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+            font-size: 15px;
         }
         input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
+            padding: 12px;
             border: none;
-            border-bottom: 1px solid white;
-            background: transparent;
-            color: white;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
             font-size: 16px;
+            margin-bottom: 10px;
         }
         input[type="submit"] {
-            width: 100%;
-            padding: 12px;
-            background-color: #00aaff;
+            margin-top: 20px;
+            padding: 14px;
+            background-color: #00bcd4;
             color: white;
             font-weight: bold;
             border: none;
             border-radius: 6px;
+            font-size: 16px;
             cursor: pointer;
         }
         input[type="submit"]:hover {
-            background-color: #0099dd;
+            background-color: #0097a7;
         }
-        h1 {
-            font-size: 32px;
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Left Panel -->
+        <!-- Left Section -->
         <div class="left">
             <h1>STOCK KEEPING UNITS</h1>
             <p>
-                SKU (pronounced “skew”), short for stock keeping unit, is used by retailers to identify and track its inventory or stock.
-                A SKU is a unique code consisting of letters and numbers that identify characteristics about each product,
-                such as manufacturer, brand, style, color, and size.
+                SKU (pronounced “skew”), short for stock keeping unit, is used by retailers to identify and track inventory or stock.
+                A SKU is a unique identifier made up of letters and numbers that represent characteristics such as manufacturer, brand, category, style, or size.
+                <br><br>
+                Use the form on the right to predict product demand and manage inventory efficiently.
             </p>
         </div>
 
-        <!-- Right Panel (Form) -->
+        <!-- Right Section -->
         <div class="right">
+            <h2>SKU Demand Prediction</h2>
             <form action="/predict" method="POST">
-                <h2>SKU</h2>
-                <input type="text" name="feature1" placeholder="Enter any Value" required>
-                <input type="text" name="feature2" placeholder="Enter any Value" required>
-                <input type="text" name="feature3" placeholder="Enter any Value" required>
-                <input type="text" name="feature4" placeholder="Enter any Value" required>
-                <input type="submit" value="Submit">
+                <label for="store_id">Store ID</label>
+                <input type="text" id="store_id" name="store_id" placeholder="e.g., 101" required>
+
+                <label for="item_id">Item ID</label>
+                <input type="text" id="item_id" name="item_id" placeholder="e.g., 5023" required>
+
+                <label for="week_num">Week/Day Number</label>
+                <input type="text" id="week_num" name="week_num" placeholder="e.g., 12 or 202314" required>
+
+                <label for="past_sales">Past Units Sold</label>
+                <input type="text" id="past_sales" name="past_sales" placeholder="e.g., 250" required>
+
+                <input type="submit" value="Predict Demand">
             </form>
         </div>
     </div>
