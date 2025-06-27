@@ -2,6 +2,9 @@
 
 **Overview**  
 This project focuses on forecasting SKU-level demand using machine learning. By analyzing historical sales data from Kaggle, the system predicts upcoming demand for individual products to help businesses avoid stockouts, reduce overstock, and streamline inventory operations.
+**The Working Deployed Model could be Viewed and Tested on the below Website**  
+https://estimation-stock-prediction.onrender.com/  
+The model is created with Flask and Deployed on Render cloud.  
 
 **Dataset**  
 The dataset used in this project was sourced from Kaggle:
