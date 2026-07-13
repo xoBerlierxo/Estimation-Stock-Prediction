@@ -1,0 +1,28 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Generated data / artifacts
+data/processed/*
+!data/processed/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log

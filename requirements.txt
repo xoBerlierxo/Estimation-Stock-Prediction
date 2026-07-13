@@ -1,17 +1,17 @@
-blinker==1.9.0
-click==8.2.1
-Flask==3.1.1
-itsdangerous==2.2.0
-Jinja2==3.1.6
-joblib==1.5.1
-MarkupSafe==3.0.2
-numpy==2.3.0
-pandas==2.3.0
-python-dateutil==2.9.0.post0
-pytz==2025.2
-scikit-learn==1.7.0
-scipy==1.15.3
-six==1.17.0
-threadpoolctl==3.6.0
-tzdata==2025.2
-Werkzeug==3.1.3
+# Runtime dependencies. Generated from pyproject.toml's [project.dependencies]
+# and pinned to the versions this project was built and tested against.
+# For development (linting, type-checking, tests), install with:
+#   pip install -e ".[dev]"
+pandas==3.0.3
+numpy==2.5.1
+scikit-learn==1.9.0
+xgboost==3.3.0
+lightgbm==4.6.0
+fastapi==0.139.0
+uvicorn[standard]==0.51.0
+pydantic==2.13.4
+pyyaml==6.0.3
+joblib==1.5.3
+matplotlib==3.11.0
+pyarrow==25.0.0
+tabulate==0.10.0

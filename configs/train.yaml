@@ -1,0 +1,28 @@
+data:
+  raw_train_path: data/raw/train.csv
+  raw_test_path: data/raw/test.csv
+  processed_dir: data/processed
+  date_col: week
+  group_cols: [store_id, sku_id]
+  target_col: units_sold
+
+features:
+  lags: [1, 2, 3, 4, 8, 12]
+  rolling_windows: [4, 8]
+  rolling_stats: [mean, std]
+  log_transform_target: true
+
+split:
+  n_test_weeks: 8
+  cv_n_splits: 5
+  cv_val_weeks: 8
+
+models:
+  candidates: [linear_regression, random_forest, xgboost, lightgbm]
+  random_state: 42
+  n_iter_search: 15
+  scoring: neg_root_mean_squared_error
+
+output:
+  model_dir: models
+  reports_dir: reports

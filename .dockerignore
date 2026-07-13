@@ -1,0 +1,14 @@
+.venv/
+data/raw/*.csv
+data/processed/
+notebooks/
+tests/
+docs/
+reports/figures/
+.git/
+.github/
+.pytest_cache/
+.mypy_cache/
+__pycache__/
+*.pyc
+.DS_Store
